@@ -8,16 +8,15 @@
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
 
-  <!-- FullCalendar CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/main.min.css" rel="stylesheet" />
+ 
 
-  <!-- ✅ Your Custom CSS -->
+  <!-- Custom CSS -->
   <link rel="stylesheet" href="style.css" />
 
-  <!-- FullCalendar JS -->
-  <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/main.min.js"></script>
-
-  <!-- Your JS -->
+ 
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <!-- Custom JS -->
   <script defer src="script.js"></script>
 </head>
 <body>
@@ -36,6 +35,10 @@
 
     <!-- Main Dashboard -->
     <main class="main-content">
+      <section class="thought">
+  <p id="quoteText">💡 "A small daily saving grows into a big future." 💰</p>
+</section>
+
       <header>
         <h1>Expense Dashboard</h1>
       </header>
@@ -92,6 +95,11 @@
       </section>
 
      
+      <!-- Monthly Chart -->
+      <section class="chart-section">
+        <h2>Monthly Income & Expenses</h2>
+        <canvas id="monthlyChart"  width="400" height="200"></canvas>
+      </section>
     </main>
   </div>
 </body>

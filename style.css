@@ -47,11 +47,7 @@ body.dark .transaction-history {
   box-shadow: 0 2px 6px rgba(255, 255, 255, 0.08);
 }
 
-
-* {
-  box-sizing: border-box;
-}
-
+* { box-sizing: border-box; }
 body {
   margin: 0;
   font-family: 'Inter', sans-serif;
@@ -75,20 +71,9 @@ body {
   gap: 20px;
 }
 
-.sidebar h2 {
-  text-align: center;
-}
-
-.sidebar ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.sidebar li {
-  margin: 10px 0;
-}
-
+.sidebar h2 { text-align: center; }
+.sidebar ul { list-style: none; padding: 0; margin: 0; }
+.sidebar li { margin: 10px 0; }
 .sidebar button {
   background: #fff;
   color: var(--primary);
@@ -106,32 +91,15 @@ body {
   gap: 30px;
 }
 
-header h1 {
-  margin: 0;
-  font-size: 24px;
-}
+header h1 { margin: 0; font-size: 24px; }
 
-.filters {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-}
+.filters { display: flex; gap: 10px; flex-wrap: wrap; }
+.filters input { padding: 10px; font-size: 16px; flex: 1 1 200px; }
 
-.filters input {
-  padding: 10px;
-  font-size: 16px;
-  flex: 1 1 200px;
-}
+.transaction-form form,
+.budget form { display: flex; flex-wrap: wrap; gap: 10px; }
 
-.transaction-form form {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-form input,
-form select,
-form button {
+form input, form select, form button {
   padding: 10px;
   font-size: 16px;
   border: 1px solid #ccc;
@@ -139,30 +107,17 @@ form button {
   flex: 1 1 150px;
 }
 
-form button {
-  background: var(--primary);
-  color: white;
-  border: none;
-  cursor: pointer;
-}
+form button { background: var(--primary); color: white; border: none; cursor: pointer; }
+form button:hover { background: #388e3c; }
 
-form button:hover {
-  background: #388e3c;
-}
-
-.transaction-history {
+.transaction-history, .budget, .calendar, .chart-section {
   background: var(--card);
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 0 2px 6px var(--shadow);
+  box-shadow: 0 2px 5px var(--shadow);
 }
 
-.list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
+.list { list-style: none; padding: 0; margin: 0; }
 .list li {
   display: flex;
   justify-content: space-between;
@@ -173,32 +128,35 @@ form button:hover {
   border-radius: 6px;
   box-shadow: 0 1px 3px var(--shadow);
 }
+.list li.plus { border-color: green; }
+.list li.minus { border-color: red; }
 
-.list li.plus {
-  border-color: green;
-}
-
-.list li.minus {
-  border-color: red;
-}
+.list li button { margin-left: 10px; cursor: pointer; }
 
 @media (max-width: 768px) {
-  .dashboard {
-    flex-direction: column;
-  }
-
-  .sidebar {
-    width: 100%;
-    text-align: center;
-  }
+  .dashboard { flex-direction: column; }
+  .sidebar { width: 100%; text-align: center; }
 }
-.budget, .calendar {
-  background: var(--card);
-  padding: 20px;
-  border-radius: 10px;
-  margin-top: 20px;
-  box-shadow: 0 2px 5px var(--shadow);
+.thought {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(90deg, #a8e063, #56ab2f); /* fresh green gradient */
+  color: #fff;
+  padding: 15px 20px;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  font-weight: 600;
+  font-size: 1.1rem;
+  text-align: center;
+  gap: 10px;
 }
 
+.thought-icon {
+  font-size: 1.5rem;
+}
 
-
+.thought-text {
+  margin: 0;
+}
